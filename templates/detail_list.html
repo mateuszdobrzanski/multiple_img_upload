@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for photo in photos %}
+{#    <img src="{{ photo.image.url }}">#}
+    <a href="{{ photo.image.url }}">{{ photo.image.name }}</a>
+    <br>
+{% endfor %}
+
+{% endblock %}

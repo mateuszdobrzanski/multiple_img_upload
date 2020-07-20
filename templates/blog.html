@@ -22,7 +22,8 @@
             <!--Text-->
             <p class="card-text">{{ post.description }}</p>
             <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-            <a href="{% url 'detail' post.id %}" class="btn btn-light-blue btn-md">Read more</a>
+            <a href="{% url 'detail' post.id %}" class="btn btn-info" role="button">Read more</a>
+            <a href="{% url 'detail_list' post.id %}" class="btn btn-danger" role="button">list files</a>
           </div>
         </div>
         <!-- Card -->

@@ -20,3 +20,14 @@ def detail_view(request, id):
                       'post': post,
                       'photos': photos,
                   })
+
+
+def detail_list_view(request, id):
+    post = get_object_or_404(Post, id=id)
+    photos = PostImage.objects.filter(post=post)
+    return render(request,
+                  'detail_list.html',
+                  {
+                      'post': post,
+                      'photos': photos,
+                  })
