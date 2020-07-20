@@ -14,6 +14,6 @@ class PostAdmin(admin.ModelAdmin):
         model = Post
 
 
-@admin.register(PostImageAdmin)
+@admin.register(PostImage)
 class PostImageAdmin(admin.ModelAdmin):
     pass
