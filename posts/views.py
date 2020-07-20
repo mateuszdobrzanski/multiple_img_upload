@@ -13,7 +13,7 @@ def blog_view(request):
 
 def detail_view(request, id):
     post = get_object_or_404(Post, id=id)
-    photos = PostImage.objects.first(post=post)
+    photos = PostImage.objects.filter(post=post)
     return render(request,
                   'detail.html',
                   {
